@@ -6,6 +6,12 @@ import "../style/PillButton.css";
 function PillRight({ onLoot, onStats, onXpCalc }) {
   const [open, setOpen] = useState(false);
 
+  const iconStyle = {
+    width: "1em",
+    height: "1em",
+    display: "block",
+  };
+
   function runAndClose(action) {
     setOpen(false);
     action();
@@ -44,7 +50,7 @@ function PillRight({ onLoot, onStats, onXpCalc }) {
           }}
         >
           <button onClick={() => runAndClose(onLoot)} className="icon-button" aria-label="loot">
-            <img src={lootIcon} alt="" />
+            <img src={lootIcon} alt="" style={iconStyle} />
           </button>
           <button onClick={() => runAndClose(onStats)} className="icon-button" aria-label="stats">
             <LuChartBar />

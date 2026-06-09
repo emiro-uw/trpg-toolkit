@@ -15,6 +15,12 @@ function PillBottom({
   const [open, setOpen] = useState(false);
   const closeTimerRef = useRef(null);
 
+  const iconStyle = {
+    width: "1em",
+    height: "1em",
+    display: "block",
+  };
+
   function cancelPendingClose() {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
@@ -74,7 +80,7 @@ function PillBottom({
         >
           {onImage && (
             <button onClick={onImage} className="icon-button" aria-label="image">
-              <img src={imageUploadIcon} alt="" />
+              <img src={imageUploadIcon} alt="" style={iconStyle} />
             </button>
           )}
           {onMap && (
@@ -89,7 +95,7 @@ function PillBottom({
           )}
           {onEnemyGenerator && (
             <button onClick={onEnemyGenerator} className="icon-button" aria-label="enemy generator">
-              <img src={enemyGeneratorIcon} alt="" />
+              <img src={enemyGeneratorIcon} alt="" style={iconStyle} />
             </button>
           )}
           {onTables && (

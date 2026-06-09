@@ -8,6 +8,12 @@ function PillZoom({ onZoomIn, onZoomOut }) {
   /* --States-- */
   const [open, setOpen] = useState(false);
 
+  const iconStyle = {
+    width: "1em",
+    height: "1em",
+    display: "block",
+  };
+
   /* --Render-- */
   return (
     <div
@@ -51,7 +57,7 @@ function PillZoom({ onZoomIn, onZoomOut }) {
       )}
 
       {/* Always-visible magnifier icon */}
-      <img src={zoomIcon} alt="" />
+      <img src={zoomIcon} alt="" style={iconStyle} />
     </div>
   );
 }

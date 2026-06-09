@@ -34,6 +34,12 @@ function PillGrid({
     minWidth: "70px",
   };
 
+  const iconStyle = {
+    width: "1em",
+    height: "1em",
+    display: "block",
+  };
+
   return (
     <div
       onMouseEnter={() => setOpen(true)}
@@ -135,7 +141,7 @@ function PillGrid({
       )}
 
       {/* Always-visible grid icon */}
-      <img src={gridResizeIcon} alt="" />
+      <img src={gridResizeIcon} alt="" style={iconStyle} />
     </div>
   );
 }
